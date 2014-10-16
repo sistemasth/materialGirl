@@ -156,7 +156,7 @@ To position the drawer to the right, add `rightDrawer` attribute.
        * @default false
        */
       disableSwipe: false,
-      
+
       /**
        * This property specifies an attribute on elements that should
        * toggle the drawer on tap.
@@ -166,7 +166,7 @@ To position the drawer to the right, add `rightDrawer` attribute.
        * @default "core-drawer-toggle"
        */
       toggleAttribute: 'core-drawer-toggle',
-      
+
       /**
        * If true, ignore `responsiveWidth` setting and force the narrow layout.
        *
@@ -253,7 +253,7 @@ To position the drawer to the right, add `rightDrawer` attribute.
       this.setAttribute('touch-action', this.swipeAllowed() ? 'pan-y' : '');
       this.fire('core-responsive-change', {narrow: this.narrow});
     },
-    
+
     forceNarrowChanged: function() {
       this.queryMatchesChanged();
     },
@@ -261,7 +261,7 @@ To position the drawer to the right, add `rightDrawer` attribute.
     swipeAllowed: function() {
       return this.narrow && !this.disableSwipe;
     },
-    
+
     isMainSelected: function() {
       return this.selected === 'main';
     },
@@ -289,9 +289,9 @@ To position the drawer to the right, add `rightDrawer` attribute.
     upHandler: function(e) {
       this.stopEdgePeak();
     },
-    
+
     tapHandler: function(e) {
-      if (e.target && this.toggleAttribute && 
+      if (e.target && this.toggleAttribute &&
           e.target.hasAttribute(this.toggleAttribute)) {
         this.togglePanel();
       }
@@ -358,7 +358,7 @@ To position the drawer to the right, add `rightDrawer` attribute.
       if (translateX === null) {
         return '';
       }
-      return this.hasWillChange ? 'translateX(' + translateX + 'px)' : 
+      return this.hasWillChange ? 'translateX(' + translateX + 'px)' :
           'translate3d(' + translateX + 'px, 0, 0)';
     },
 
@@ -373,6 +373,10 @@ To position the drawer to the right, add `rightDrawer` attribute.
     }
 
   });
+
+  function moveLogo(){
+      alert('Entra!');
+  };
 
 </script>
 </polymer-element>
