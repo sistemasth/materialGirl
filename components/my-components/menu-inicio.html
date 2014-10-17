@@ -1,0 +1,97 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
+<style>
+  .bloque{
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    display: block;
+    padding-left: 13%;
+  }
+  #bloque1{
+    /*background: #FFC0CB;*/
+  }
+  #bloque1 div{
+    margin: 8px;
+    overflow: hidden;
+  }
+  #bloque1 div{
+    display: inline-block;
+  }
+  #bloque2{
+    /*background: #DEB887;*/
+  }
+  #asideBloque{
+    margin-left: 0px;
+    width: 15%;
+    overflow: hidden;
+    height: 600px;
+  }
+  .banner{
+    width: 50%;
+    background: #3CB371;
+    height: 600px;
+  }
+  .asideCard{
+    width: 95%;
+    height: 225px;
+  }
+  .asideCard img{
+    vertical-align: middle;
+    margin: 0% 20%;
+    height: 150px;
+    width: 150px;
+  }
+  .cardDown{
+    margin: 4px;
+    display: inline-block;
+    background: #00BFFF;
+    width: 12%;
+    height: 200px;
+  }
+  .asideCard{
+    vertical-align: middle;
+    margin: 0% 20%;
+    height: 150px;
+    width: 150px;
+  }
+  .cardDown img{
+    vertical-align: middle;
+    margin: 0% 20%;
+    height: 150px;
+    width: 150px;
+  }
+  #calendar{ background: #B0E0E6; }
+  #social-logo{ background: #AFEEEE; }
+  .titleCard{
+    color: #FFF;
+    font-size: 1em;
+    text-align: left;
+    padding-left: 10px;
+    vertical-align: bottom;
+    background: #4682B4;
+    width: 100%;
+  }
+</style>
+<polymer-element name="menu-inicio" noscript>
+  <template>
+    <div class="bloque" id="bloque1">
+      <div class="banner">
+        BANNER
+      </div>
+      <div id="asideBloque">
+        <div class="asideCard" id="social-logo"><img src="../../images/acerca.svg"><br><span class="titleCard">Redes Sociales</span></div>
+        <div class="asideCard" id="calendar"><img src="../../images/calendar.svg"><br><span class="titleCard">Calendario</span></div>
+      </div>
+    </div>
+    <div class="bloque" id="bloque2">
+      <div class="cardDown"><img src="../../images/acerca.svg"><br><span class="titleCard">Acerca</span></div>
+      <div class="cardDown"><img src="../../images/al_aire.svg"><br><span class="titleCard">En vivo</span></div>
+      <div class="cardDown"><img src="../../images/certifica.svg"><br><span class="titleCard">Certificate</span></div>
+      <div class="cardDown"><img src="../../images/blog.svg"><br><span class="titleCard">Blog</span></div>
+      <div class="cardDown"><img src="../../images/acerca.svg"><br><span class="titleCard">Start tools</span></div>
+    </div>
+  </template>
+</polymer-element>
+    
+    

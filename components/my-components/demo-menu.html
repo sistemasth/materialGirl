@@ -1,0 +1,72 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
+<style>
+  .bloque{
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    display: block;
+    padding-left: 13%;
+  }
+  #bloque1{
+    background: #FFC0CB;
+  }
+  #bloque1 div{
+    margin: 8px;
+    overflow: hidden;
+  }
+  #bloque1 div{
+    display: inline-block;
+  }
+  #bloque2{
+    background: #DEB887;
+  }
+  #asideBloque{
+    width: 15%;
+    background-color: red;
+    overflow: hidden;
+  }
+  #asideBloque div{
+    display: block;
+  }
+  .banner{
+    width: 60%;
+    background: #3CB371;
+    height: 610px;
+  }
+  .asideCard{
+    background: #00FF00;
+    width: 20%;
+    height: 200px;
+  }
+  .cardDown{
+    margin: 4px;
+    display: inline-block;
+    background: #00BFFF;
+    width: 14.5%;
+    height: 200px;
+  }
+  
+</style>
+<polymer-element name="menu-inicio" noscript>
+  <template>
+    <div class="bloque" id="bloque1">
+      <div class="banner">
+        BANNER
+      </div>
+      <div id="asideBloque">
+        <div class="asideCard"><img src="../../images/acerca.svg"></div>
+        <div class="asideCard">CALENDARIO</div>
+      </div>
+    </div>
+    <div class="bloque" id="bloque2">
+      <div class="cardDown">Acerca </div>
+      <div class="cardDown">En vivo</div>
+      <div class="cardDown">Certificate</div>
+      <div class="cardDown">Blog</div>
+      <div class="cardDown">Start tools</div>
+    </div>
+  </template>
+</polymer-element>
+    
+    
