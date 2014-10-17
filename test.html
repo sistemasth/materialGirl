@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <title>polymer-ui-scaffold</title>
+        <script src="platform/platform.js"></script>
+        <link rel="import" href="polymer-ui-scaffold.html">
+        <link rel="import" href="components/core-icon-button/core-icon-button.html">
+        <link rel="import" href="components/core-item/core-item.html">
+        <link rel="import" href="components/core-menu-button/core-menu-button.html">
+        <link rel="import" href="components/core-menu/core-menu.html">
+        <style>
+            body {
+                font-family: Neue Helvetica, Roboto, Arial;
+            }
+            [main] {
+                padding: 8px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border: 3px solid magenta;
+            }
+            [navigation] {
+                width: 256px;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body unresolved>
+        <h2>scaffold</h2>
+    <polymer-ui-scaffold theme="polymer-ui-dark-theme" style="display: block; position: relative; height: 400px;">
+
+        <div tool flex>Title</div>
+        <core-icon-button tool icon="briefcase"></core-icon-button>
+        <core-icon-button tool icon="marker"></core-icon-button>
+        <core-icon-button tool icon="account"></core-icon-button>
+        <core-menu-button tool icon="dots" Xtheme="polymer-ui-light-theme" halign="right">
+            <core-item>Item</core-item>
+            <core-item>Item</core-item>
+        </core-menu-button>
+
+        <div main>
+            Content.
+        </div>
+
+        <core-menu navigation label="Navigimation" offscreen="basement">
+            <core-item>Item</core-item>
+            <core-item>Item</core-item>
+        </core-menu>
+
+    </polymer-ui-scaffold>
+</body>
+</html>
