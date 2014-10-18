@@ -14,7 +14,6 @@
     /*background: #FFC0CB;*/
   }
   #bloque1 div{
-    margin: 8px;
     overflow: hidden;
   }
   #bloque1 div{
@@ -24,19 +23,24 @@
     /*background: #DEB887;*/
   }
   #asideBloque{
-    margin-left: 0px;
-    width: 15%;
+    margin-left: 3px;
+    width: 14%;
     overflow: hidden;
     height: 600px;
+    /*background-color: red;*/
   }
   .banner{
     width: 50%;
     background: #3CB371;
     height: 600px;
   }
+ 
   .asideCard{
-    width: 95%;
-    height: 225px;
+    vertical-align: middle;
+    margin-left: 4px;
+    margin-bottom: 8px;
+    height: 39%;
+    width: 225px;
   }
   .asideCard img{
     vertical-align: middle;
@@ -51,12 +55,7 @@
     width: 12%;
     height: 200px;
   }
-  .asideCard{
-    vertical-align: middle;
-    margin: 0% 20%;
-    height: 150px;
-    width: 150px;
-  }
+  
   .cardDown img{
     vertical-align: middle;
     margin: 0% 20%;
@@ -64,15 +63,29 @@
     width: 150px;
   }
   #calendar{ background: #B0E0E6; }
-  #social-logo{ background: #AFEEEE; }
-  .titleCard{
+  #social-logo{ background: #D3D3D3; }
+  #card1{ margin-left: 0px; background: #EE82EE; }
+  #card2{ background: #FFA07A; }
+  #card3{ background: #ADFF2F; }
+  #card4{ background: #7FFFD4; }
+  #card5{ background: #FFD700; }
+
+  #title{ background: #FFD700; }
+  #title0{ background: #00FA9A; }
+  #title1{ background: #FF69B4; }
+  #title2{ background: #FF6347; }
+  #title3{ background: #ADFF2F; }
+  #title4{ background: #40E0D0; }
+  #title5{ background: #FFD700; }
+
+  span.titleCard{
+    display: block;
     color: #FFF;
     font-size: 1em;
     text-align: left;
-    padding-left: 10px;
-    vertical-align: bottom;
     background: #4682B4;
     width: 100%;
+    height: 45px;
   }
 </style>
     <div class="bloque" id="bloque1">
@@ -80,16 +93,16 @@
         BANNER
       </div>
       <div id="asideBloque">
-        <div class="asideCard" id="social-logo"><img src="../../images/acerca.svg"><br><span class="titleCard">Redes Sociales</span></div>
-        <div class="asideCard" id="calendar"><img src="../../images/calendar.svg"><br><span class="titleCard">Calendario</span></div>
+        <div class="asideCard" id="social-logo"><img src="../../images/acerca.svg"><span class="titleCard" id="title">Redes Sociales</span></div>
+        <div class="asideCard" id="calendar"><img src="../../images/calendar.svg"><span class="titleCard" id="title0">Calendario</span></div>
       </div>
     </div>
     <div class="bloque" id="bloque2">
-      <div class="cardDown"><img src="../../images/acerca.svg"><br><span class="titleCard">Acerca</span></div>
-      <div class="cardDown"><img src="../../images/al_aire.svg"><br><span class="titleCard">En vivo</span></div>
-      <div class="cardDown"><img src="../../images/certifica.svg"><br><span class="titleCard">Certificate</span></div>
-      <div class="cardDown"><img src="../../images/blog.svg"><br><span class="titleCard">Blog</span></div>
-      <div class="cardDown"><img src="../../images/acerca.svg"><br><span class="titleCard">Start tools</span></div>
+      <div class="cardDown" id="card1"><img src="../../images/acerca.svg"><span class="titleCard" id="title1">Acerca</span></div>
+      <div class="cardDown" id="card2"><img src="../../images/al_aire.svg"><span class="titleCard" id="title2">En vivo</span></div>
+      <div class="cardDown" id="card3"><img src="../../images/certifica.svg"><span class="titleCard" id="title3">Certificate</span></div>
+      <div class="cardDown" id="card4"><img src="../../images/blog.svg"><span class="titleCard" id="title4">Blog</span></div>
+      <div class="cardDown" id="card5"><img src="../../images/acerca.svg"><span class="titleCard" id="title5">Start tools</span></div>
     </div>
   </template>
 </polymer-element>
