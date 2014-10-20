@@ -1,0 +1,265 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
+<polymer-element name="menu-inicio-test" noscript>
+  <template>
+    <style>
+  
+/*======================= media queries for animations =======================*/
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden
+}
+
+
+ul {
+  list-style-type: none
+}
+
+.dashboard {
+  margin: 0 auto;
+  width: 100%;
+  padding: 1em;
+  -webkit-transform: translateX(200px);
+  -ms-transform: translateX(200px);
+  -o-transform: translateX(200px);
+  transform: translateX(200px);
+  opacity: 0;
+  -webkit-animation: start 1s ease-out forwards;
+  -o-animation: start 1s ease-out forwards;
+  animation: start 1s ease-out forwards
+}
+
+@-webkit-keyframes start {
+  0% {
+    -webkit-transform: translateX(200px);
+    opacity: 0
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    opacity: 1
+  }
+}
+
+@keyframes start {
+  0% {
+    -webkit-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    -o-transform: translateX(200px);
+    transform: translateX(200px);
+    opacity: 0
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1
+  }
+}
+
+.col1,
+.col2 {
+  width: 99%;
+  margin: 1em auto
+}
+
+
+.tile {
+  float: left;
+  margin: 0 auto 1%;
+  color: white;
+  font-size: 1.3em;
+  text-align: center;
+  height: 8em;
+  font-weight: 300;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  color: #333;
+  position: relative;
+  -webkit-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out
+}
+
+.tile-big {
+  width: 100%;
+  min-height: 20em; /* banner */
+  background: #00cc66;
+}
+
+.tile-small {
+  width: 23.9%;
+  margin-right: 0.5em;
+  height: 190px;
+}
+.tile-small-2 {
+  width: 52%;
+  height: 206px;
+  margin-right: 2%;
+}
+.start-tools{
+   width: 52%;
+   margin-top: 4px;
+  height: 190px;
+  margin-right: 2%;
+}
+.acerca{
+  background: #ee82ee url(../../images/acerca.svg) no-repeat;
+  background-position: center;
+}
+.envivo{
+  background: #fa8072 url(../../images/al_aire.svg) no-repeat;
+  background-position: center;
+}
+.certificate{
+  background: #98fb98 url(../../images/certifica.svg) no-repeat;
+  background-position: center;
+}
+.blog{
+  margin-right: 0px;
+  background: #87cefa url(../../images/blog.svg) no-repeat;
+  background-position: center;
+}
+.start-tools{
+  background: #f0e68c url(../../images/acerca.svg) no-repeat;
+  background-position: center;
+}
+.calendario{
+  background: #98fb98 url(../../images/calendar.svg) no-repeat;
+  background-position: center;
+}
+.redes{
+  background: #c0c0c0 url(../../images/acerca.svg) no-repeat;
+  background-position: center;
+}
+/*======================= media queries =======================*/
+@media screen and (min-width: 30em) { /* 430 px */
+  .col1 {
+    float: left;
+    margin-right: 1%;
+    width: 100%;
+  }
+  .col2{
+    float: left;
+    margin-right: 1%;
+    width: 100%
+  }
+  .media-query{
+    background: red;
+  }
+}
+
+
+@media screen and (min-width: 43.75em) { /* 700 px */
+  .col1 {
+    float: left;
+    margin-right: 1%;
+    width: 100%;
+  }
+  .col2{
+    float: left;
+    margin-right: 1%;
+    width: 50%
+  }
+  .col2{
+    width: 100%;
+  }
+  .media-query{
+    background: green;
+  }
+}
+
+@media screen and (min-width: 64em) { /* 1024 px */
+  .col1{
+    float: left;
+    margin-right: .5%;
+    width: 61%
+  }
+  .col2{
+    float: left;
+    margin-right: .5%;
+    width: 31%;
+  }
+  .col1 {
+    margin-left: 2em
+  }
+  .page-title{
+    font-size:3.5em;
+  }
+  .media-query{
+    background: yellow;
+  }
+}
+
+</style>
+
+  <div class="dashboard clearfix">
+    <ul class="tiles">
+      <div class="col1 clearfix">
+        <paper-ripple class="tile tile-big slideTextUp" >
+          <div><p class=""></p></div>
+        </paper-ripple>
+        <paper-ripple class="acerca tile tile-small slideTextRight" >
+          <div><p class="">titulo</p></div>
+        </paper-ripple>
+        <paper-ripple class="envivo tile tile-small " >
+          <p class="icon-calendar-alt-fill"></p>
+        </paper-ripple>
+        <paper-ripple class="certificate tile tile-small slideTextRight">
+          <div><p class=""></p></div>
+          <div><p>Tile</p></div>
+        </paper-ripple>
+        <paper-ripple class="blog tile tile-small slideTextRight">
+          <div><p class=""></p></div>
+          <div><p>Tile</p></div>
+        </paper-ripple>
+      </div>
+
+      <div class="col2 clearfix">
+
+        <paper-ripple class="redes tile tile-small-2" >
+          <p class=""></p>
+        </paper-ripple>
+        <paper-ripple class="calendario tile tile-small-2" >
+          <p class=""></p>
+        </paper-ripple>
+        <paper-ripple class="start-tools tile" >
+          <p class=""></p>
+        </paper-ripple>
+      </div>
+
+
+    </ul>
+  </div>
+
+  </template>
+</polymer-element>
+    
+    

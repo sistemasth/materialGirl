@@ -11,23 +11,23 @@
     padding-left: 13%;
   }
   #bloque1{
-    /*background: #FFC0CB;*/
+
   }
-  #bloque1 div{
+  #bloque1 div, paper-ripple{
     overflow: hidden;
   }
-  #bloque1 div{
+  #bloque1 div, paper-ripple{
     display: inline-block;
   }
   #bloque2{
-    /*background: #DEB887;*/
+
   }
   #asideBloque{
     margin-left: 3px;
     width: 14%;
     overflow: hidden;
     height: 600px;
-    /*background-color: red;*/
+
   }
   .banner{
     width: 50%;
@@ -89,9 +89,9 @@
   }
 </style>
     <div class="bloque" id="bloque1">
-      <div class="banner">
-        BANNER
-      </div>
+
+        <paper-ripple class="banner recenteringTouch"></paper-ripple>
+      
       <div id="asideBloque">
         <div class="asideCard" id="social-logo"><img src="../../images/acerca.svg"><span class="titleCard" id="title">Redes Sociales</span></div>
         <div class="asideCard" id="calendar"><img src="../../images/calendar.svg"><span class="titleCard" id="title0">Calendario</span></div>
@@ -104,6 +104,7 @@
       <div class="cardDown" id="card4"><img src="../../images/blog.svg"><span class="titleCard" id="title4">Blog</span></div>
       <div class="cardDown" id="card5"><img src="../../images/acerca.svg"><span class="titleCard" id="title5">Start tools</span></div>
     </div>
+    
   </template>
 </polymer-element>
     
