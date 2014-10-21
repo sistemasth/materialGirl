@@ -110,9 +110,9 @@ ul {
   transition: background-color 0.2s ease-out
 }
 
-.tile-big {
+.banner {
   width: 100%;
-  min-height: 20em; /* banner */
+  height: 20em; /* banner */
   background: #00cc66;
 }
 
@@ -127,8 +127,8 @@ ul {
   margin-right: 2%;
 }
 .start-tools{
-   width: 52%;
-   margin-top: 4px;
+  width: 52%;
+  margin-top: 4px;
   height: 190px;
   margin-right: 2%;
 }
@@ -162,13 +162,25 @@ ul {
   background-position: center;
 }
 /*======================= media queries =======================*/
-@media screen and (min-width: 30em) { /* 430 px */
+
+@media screen and (max-width: 480px) {     /* #mobile */
+  .dashboard{
+    margin: 0px 0px;
+    overflow: hidden;
+    height: auto;
+  }
+  .banner{
+    height: 11em;
+  }
+
   .col1 {
     float: left;
     margin-right: 1%;
     width: 100%;
+    margin-bottom: 0px;
   }
   .col2{
+    margin-top: 0px;
     float: left;
     margin-right: 1%;
     width: 100%
@@ -176,18 +188,23 @@ ul {
   .media-query{
     background: red;
   }
+  .col1 paper-ripple{
+    display: block;
+    width: 100%;
+  }
+  .col2 paper-ripple{
+    width: 100%;
+  }
 }
 
-
-@media screen and (min-width: 43.75em) { /* 700 px */
+@media only screen and (min-width: 481px) and (max-width: 779px) { /*  tablets */
   .col1 {
     float: left;
-    margin-right: 1%;
     width: 100%;
   }
   .col2{
     float: left;
-    margin-right: 1%;
+    margin-right: 0%;
     width: 50%
   }
   .col2{
@@ -196,9 +213,77 @@ ul {
   .media-query{
     background: green;
   }
+  .dashboard{
+    margin: 0px 0px;
+    overflow: hidden;
+    height: auto;
+  }
+  .banner{
+    height: 15em;
+  }
+  .acerca, .envivo, .certificate, .blog{
+    width: 49.5%;
+    padding: 0px;
+    margin: 1px;
+  }
+  .col1{
+    margin-bottom: 1px; 
+  }
+  .col2{
+    margin-top: 1px;
+  }
+  .col2 paper-ripple{
+    margin: 1px;
+    padding: 0px;
+    width: 49.5%;
+    display: inline-block;
+  }
 }
 
-@media screen and (min-width: 64em) { /* 1024 px */
+@media only screen and (min-width : 780px) and (max-width : 1024px) {
+  .col1{
+    float: left;
+    margin-right: .5%;
+    width: 100%
+  }
+  .col2{
+    float: left;
+    margin-right: .5%;
+    width: 31%;
+  }
+  .col1 {
+    margin-left: 2em
+  }
+  .page-title{
+    font-size:3.5em;
+  }
+  .media-query{
+    background: yellow;
+  }
+  .acerca, .envivo, .certificate, .blog, .start-tools,.calendario,.redes{
+    background-size: 5em;
+  }
+  .dashboard{
+    margin: 0px 0px;
+    overflow: hidden;
+    height: auto;
+  }
+  .col1{
+    margin-bottom: 1px; 
+  }
+  .col2{
+    margin-top: 1px;
+  }
+  .col2 paper-ripple{
+    margin: 2px;
+    padding: 0px;
+    width: 100%;
+    display: inline-block;
+  }
+
+}
+
+@media only screen and (min-width: 1024px){
   .col1{
     float: left;
     margin-right: .5%;
@@ -216,28 +301,28 @@ ul {
     font-size:3.5em;
   }
   .media-query{
-    background: yellow;
+    background: blue;
   }
 }
 
 </style>
-
+<h1 class="media-query">BIENVENIDO</h1>
   <div class="dashboard clearfix">
     <ul class="tiles">
       <div class="col1 clearfix">
-        <paper-ripple class="tile tile-big slideTextUp" >
+        <paper-ripple class="banner recenteringTouch tile" >
           <p class="">Titulo Card</p>
         </paper-ripple>
-        <paper-ripple class="acerca tile tile-small slideTextRight" >
+        <paper-ripple class="acerca tile tile-small " >
           <p class="">titulo</p>
         </paper-ripple>
         <paper-ripple class="envivo tile tile-small " >
           <p class="">Titulo Card</p>
         </paper-ripple>
-        <paper-ripple class="certificate tile tile-small slideTextRight">
+        <paper-ripple class="certificate tile tile-small ">
           <p class="">Titulo Card</p> 
         </paper-ripple>
-        <paper-ripple class="blog tile tile-small slideTextRight">
+        <paper-ripple class="blog tile tile-small ">
           <p class="">Titulo Card</p>
         </paper-ripple>
       </div>
