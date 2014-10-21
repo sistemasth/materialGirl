@@ -9,83 +9,81 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <html>
-<head>
-  <title>core-scaffold</title>
+    <head>
+        <title>core-scaffold</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
 
-  <script src="components/platform/platform.js"></script>
-  <link rel="import" href="components/my-components/menu-inicio-test.html">
-  <link rel="import" href="core-scaffold.html">
-  <link rel="import" href="components/core-header-panel/core-header-panel.html">
-  <link rel="import" href="components/core-menu/core-menu.html">
-  <link rel="import" href="components/core-item/core-item.html">
-<style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    body {
-      font-family: sans-serif;
-    }
-    core-scaffold {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
+        <script src="components/platform/platform.js"></script>
+        <link rel="import" href="components/my-components/menu-inicio-test.html">
+        <link rel="import" href="components/core-scaffold/core-scaffold.html">
+        <link rel="import" href="components/core-header-panel/core-header-panel.html">
+        <link rel="import" href="components/core-menu/core-menu.html">
+        <link rel="import" href="components/core-item/core-item.html">
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+            body {
+                font-family: sans-serif;
+            }
+            core-scaffold {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
 
-    .content {
-      background-color: #fff;
-      height: 5000px;
-      padding: 20px;
-    }
+            .content {
+                background-color: #fff;
+                padding: 20px;
+            }
 
-    /* some default styles for mode="cover" on core-scaffold */
-    core-scaffold[mode=cover]::shadow core-header-panel::shadow #mainContainer {
-      left: 120px;
-    }
+            /* some default styles for mode="cover" on core-scaffold */
+            core-scaffold[mode=cover]::shadow core-header-panel::shadow #mainContainer {
+                left: 120px;
+            }
 
-    core-scaffold[mode=cover] .content {
-      margin: 20px 100px 20px 0;
-    }
-    img{
-      width: 80%;
-      max-width: 200px;
-    }
-  </style>
+            core-scaffold[mode=cover] .content {
+                margin: 20px 100px 20px 0;
+            }
+            img{
+                width: 80%;
+                max-width: 200px;
+            }
+        </style>
 
-</head>
+    </head>
 
-<body unresolved>
+    <body unresolved>
+        <div id="animate-me" hidden></div>
+    <core-scaffold>
 
-  <core-scaffold>
+        <core-header-panel navigation flex mode="seamed">
+            <core-toolbar>Menu</core-toolbar>
+            <core-menu>
+                <a href="#"><core-item icon="home" label="Inicio"></core-item></a>
+                <core-item icon="today" label="Calendario"></core-item>
+                <core-item icon="work" label="Blog"></core-item>
+                <core-item icon="group-work" label="Comunidades"></core-item>
+                <core-item icon="theaters" label="En Vivo"></core-item>
+                <core-item icon="class" label="Certificate"></core-item>
+                <core-item icon="grade" label="Start Tools"></core-item>
+                <core-item icon="thumb-up" label="Redes Sociales"></core-item>
+                <core-item icon="explore" label="Acerca"></core-item>
+            </core-menu>
+        </core-header-panel>
 
-    <core-header-panel navigation flex mode="seamed">
-      <core-toolbar style="background-color: rgba(178, 228, 251, 0.25); color: #778f9b;">Menu</core-toolbar>
-      <core-menu>
-        <core-item icon="home" label="Inicio"></core-item>
-        <core-item icon="today" label="Calendario"></core-item>
-        <core-item icon="work" label="Blog"></core-item>
-        <core-item icon="group-work" label="Comunidades"></core-item>
-        <core-item icon="theaters" label="En Vivo"></core-item>
-        <core-item icon="class" label="Certificate"></core-item>
-        <core-item icon="grade" label="Start Tools"></core-item>
-        <core-item icon="thumb-up" label="Redes Sociales"></core-item>
-        <core-item icon="explore" label="Acerca"></core-item>
-      </core-menu>
-    </core-header-panel>
+        <div tool><img id="logoHub" src="images/thub_logo.svg"></div>
 
-    <div tool><img id="logoHub" src="images/thub_logo.svg"></div>
+        <menu-inicio-test></menu-inicio-test>
 
-    <div class="content">
-     <menu-inicio-test></menu-inicio-test>
-    </div>
 
-  </core-scaffold>
+    </core-scaffold>
 
 </body>
 </html>

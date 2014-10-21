@@ -88,11 +88,6 @@ To have the content fit to the main area, use `fit` attribute.
       background-color: #eee;
     }
     
-    core-toolbar {
-      background-color: #526E9C;
-      color: #fff;
-    }
-    
     #drawerPanel:not([narrow]) #menuButton {
       display: none;
     }
@@ -107,7 +102,7 @@ To have the content fit to the main area, use `fit` attribute.
 
     </div>
     
-    <core-header-panel id="headerPanel" main mode="{{mode}}">
+    <core-header-panel id="headerPanel" main mode="{{mode}}" shadow="true">
 
       <core-toolbar>
         <template if="{{!rightDrawer}}">
@@ -168,7 +163,7 @@ To have the content fit to the main area, use `fit` attribute.
        * @type string
        * @default '600px'
        */    
-      responsiveWidth: '600px',
+      responsiveWidth: '5000px',
       
       /**
        * If true, position the drawer to the right. Also place menu icon to
