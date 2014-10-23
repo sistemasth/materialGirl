@@ -9,6 +9,62 @@
 <polymer-element name="menu-inicio-test" noscript>
     <template>
         <style>
+            .banner{
+                background: url(../../images/banner.svg) no-repeat;
+                background-position: center;
+                background-color: #32CD32;
+            }
+            .acerca{
+                background: url(../../images/acerca.svg) no-repeat;
+                background-position: center;
+                background-color: #cd92d7;
+            }
+            .envivo{
+                background: url(../../images/al_aire.svg) no-repeat;
+                background-position: center;
+                background-color: #ff8964 ;
+            }
+            .certifica{
+                background: url(../../images/certifica.svg) no-repeat;
+                background-position: center;
+                background-color: #cbff8f;
+            }
+            .blog{
+                background: url(../../images/blog.svg) no-repeat;
+                background-position: center;
+                background-color: #7fdde9;
+            }
+            .starttool{
+                background: url(../../images/certifica.svg) no-repeat;
+                background-position: center;
+                background-color: #fbe58c;
+            }
+            .calendar{
+                background: url(../../images/calendar.svg) no-repeat;
+                background-position: center;
+                background-color: #b8f5c9;
+            }
+            .redes{
+                background: url(../../images/blog.svg) no-repeat;
+                background-position: center;
+                background-color: #FFFCCC;
+            }
+            /* background label cards */
+            .lblacerca{ background-color: #b967c7; }
+            .lblenvivo{ background-color:  #ff6f42; }
+            .lblcertifica{ background-color: #add480; }
+            .lblblog{ background-color: #4ec2f6; }
+            .lblstart{ background-color: #fbbf2c; }
+            .lblredes{ background-color: #f5bd19; }
+            .lblcalendar{ background-color: #1ce8b5; }
+            
+            .cat-name{
+                height: 45px;
+                padding: 0px 16px;
+                font-size: 1em;
+                color: #FFF;
+                margin-top: 221px;
+            }
             @media only screen and (min-width: 1245px){
                 section > * {
                     margin: 8px 2px;
@@ -20,7 +76,6 @@
                     width: 239px;
                     height: 266px;
                     vertical-align: top;
-                    background-color: #fff;
                 }
 
                 #banner{
@@ -43,7 +98,6 @@
                     width: 180px;
                     height: 200px;
                     vertical-align: top;
-                    background-color: #fff;
                 }
 
                 #banner{
@@ -53,6 +107,10 @@
                 .dashboard {
                     margin: auto;
                     width: 944px;
+                }
+                .cat-name{
+                    margin-top: 160px;
+                    height: 40px;
                 }
             }
 
@@ -66,7 +124,6 @@
                     width: 180px;
                     height: 200px;
                     vertical-align: top;
-                    background-color: #fff;
                 }
                 .eliminar{
                     display: none;
@@ -74,6 +131,10 @@
                 .dashboard {
                     margin: auto;
                     width: 570px;
+                }
+                .cat-name{
+                    margin-top: 160px;
+                    height: 40px;
                 }
 
             }
@@ -88,7 +149,6 @@
                     width: 180px;
                     height: 200px;
                     vertical-align: top;
-                    background-color: #fff;
                 }
                 .eliminar{
                     display: none;
@@ -96,6 +156,10 @@
                 .dashboard {
                     margin: auto;
                     width: 375px;
+                }
+                .cat-name{
+                    margin-top: 160px;
+                    height: 40px;
                 }
             }
             @media only screen  and (max-width: 374px){
@@ -108,7 +172,6 @@
                     width: 135px;
                     height: 150px;
                     vertical-align: top;
-                    background-color: #fff;
                 }
                 .eliminar{
                     display: none;
@@ -116,6 +179,10 @@
                 .dashboard {
                     margin: auto;
                     width: 285px;
+                }
+                .cat-name{
+                    margin-top: 130px;
+                    height: 20px;
                 }
             }
 
@@ -131,40 +198,40 @@
                 </div>
             </section>
             <section>
-                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label" fit>Redes</div>
+                <div  class="card redes"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label cat-name lblredes" fit>Redes</div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
                 <br class="eliminar" />
-                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label" fit>Calendario</div>
+                <div  class="card calendar"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label cat-name lblcalendar" fit>Calendario</div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
                 <br class="eliminar" />
-                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label" fit>Acerca</div>
+                <div  class="card acerca"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label cat-name lblacerca" fit>Acerca</div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
-                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label" fit>En Vivo</div>
+                <div  class="card envivo"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label cat-name lblenvivo" fit>En Vivo</div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
-                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label" fit>Certificate</div>
+                <div  class="card certifica"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label cat-name lblcertifica" fit>Certificate</div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
-                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label" fit>Blog</div>
+                <div  class="card blog"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label cat-name lblblog" fit>Blog</div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
-                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label" fit>Start-Tools</div>
+                <div  class="card starttool"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label cat-name lblstart" fit>Start-Tools</div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
