@@ -9,74 +9,168 @@
 <polymer-element name="menu-inicio-test" noscript>
     <template>
         <style>
-            section > * {
-                margin: 6px 1px;
+            @media only screen and (min-width: 1245px){
+                section > * {
+                    margin: 8px 2px;
+                }
+
+                .card{
+                    position: relative;
+                    display: inline-block;
+                    width: 239px;
+                    height: 266px;
+                    vertical-align: top;
+                    background-color: #fff;
+                }
+
+                #banner{
+                    width:984px;
+                    height:548px; 
+                }
+                .dashboard {
+                    margin: auto;
+                    width: 1246px;
+                }
             }
 
-            .card{
-                position: relative;
-                display: inline-block;
-                width: 180px;
-                height: 200px;
-                vertical-align: top;
-                background-color: #fff;
+            @media only screen and (min-width: 945px) and (max-width: 1245px){
+                section > * {
+                    margin: 6px 1px;
+                }
+                .card{
+                    position: relative;
+                    display: inline-block;
+                    width: 180px;
+                    height: 200px;
+                    vertical-align: top;
+                    background-color: #fff;
+                }
+
+                #banner{
+                    width: 740px;
+                    height: 412px;
+                }
+                .dashboard {
+                    margin: auto;
+                    width: 944px;
+                }
             }
 
-            @media only screen and (max-width: 944px){
+            @media only screen and (min-width: 570px) and (max-width: 944px){
+                section > * {
+                    margin: 6px 1px;
+                }
+                .card{
+                    position: relative;
+                    display: inline-block;
+                    width: 180px;
+                    height: 200px;
+                    vertical-align: top;
+                    background-color: #fff;
+                }
                 .eliminar{
                     display: none;
+                }
+                .dashboard {
+                    margin: auto;
+                    width: 570px;
                 }
 
             }
 
+            @media only screen and (min-width: 375px) and (max-width: 569px){
+                section > * {
+                    margin: 6px 1px;
+                }
+                .card{
+                    position: relative;
+                    display: inline-block;
+                    width: 180px;
+                    height: 200px;
+                    vertical-align: top;
+                    background-color: #fff;
+                }
+                .eliminar{
+                    display: none;
+                }
+                .dashboard {
+                    margin: auto;
+                    width: 375px;
+                }
+            }
+            @media only screen  and (max-width: 374px){
+                section > * {
+                    margin: 6px 1px;
+                }
+                .card{
+                    position: relative;
+                    display: inline-block;
+                    width: 135px;
+                    height: 150px;
+                    vertical-align: top;
+                    background-color: #fff;
+                }
+                .eliminar{
+                    display: none;
+                }
+                .dashboard {
+                    margin: auto;
+                    width: 285px;
+                }
+            }
+
         </style>
-        <h1 class="media-query">BIENVENIDO</h1>
-        <section style="float:left; margin-right:4px;" class="eliminar">
-            <div  class="card" onmouseover="$(this).children('paper-shadow').attr('z','3');"  onmouseout="$(this).children('paper-shadow').attr('z','1');" style="width:740px; height:412px;">
-                <div class="label" fit>Banner</div>
-                <paper-shadow  z="1" ></paper-shadow>
-                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-            </div>
-        </section>
-        <section>
-            <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z','3');"  onmouseout="$(this).children('paper-shadow').attr('z','1');">
-                <div class="label" fit>Redes</div>
-                <paper-shadow  z="1" ></paper-shadow>
-                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-            </div>
-            <br class="eliminar" />
-            <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z','3');"  onmouseout="$(this).children('paper-shadow').attr('z','1');">
-                <div class="label" fit>Calendario</div>
-                <paper-shadow  z="1" ></paper-shadow>
-                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-            </div>
-            <br class="eliminar" />
-            <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z','3');"  onmouseout="$(this).children('paper-shadow').attr('z','1');">
-                <div class="label" fit>Acerca</div>
-                <paper-shadow  z="1" ></paper-shadow>
-                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-            </div>
-            <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z','3');"  onmouseout="$(this).children('paper-shadow').attr('z','1');">
-                <div class="label" fit>En Vivo</div>
-                <paper-shadow  z="1" ></paper-shadow>
-                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-            </div>
-            <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z','3');"  onmouseout="$(this).children('paper-shadow').attr('z','1');">
-                <div class="label" fit>Certificate</div>
-                <paper-shadow  z="1" ></paper-shadow>
-                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-            </div>
-            <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z','3');"  onmouseout="$(this).children('paper-shadow').attr('z','1');">
-                <div class="label" fit>Blog</div>
-                <paper-shadow  z="1" ></paper-shadow>
-                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-            </div>
-            <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z','3');"  onmouseout="$(this).children('paper-shadow').attr('z','1');">
-                <div class="label" fit>Start-Tools</div>
-                <paper-shadow  z="1" ></paper-shadow>
-                <paper-ripple class="recenteringTouch" fit></paper-ripple>
-            </div>
-        </section>
+
+        <div class="dashboard">
+            <h1 class="media-query">BIENVENIDO</h1>
+            <section style="float:left; margin-right:4px;" class="eliminar">
+                <div id="banner" class="card" onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label" fit>Banner</div>
+                    <paper-shadow  z="1" ></paper-shadow>
+                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
+                </div>
+            </section>
+            <section>
+                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label" fit>Redes</div>
+                    <paper-shadow  z="1" ></paper-shadow>
+                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
+                </div>
+                <br class="eliminar" />
+                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label" fit>Calendario</div>
+                    <paper-shadow  z="1" ></paper-shadow>
+                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
+                </div>
+                <br class="eliminar" />
+                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label" fit>Acerca</div>
+                    <paper-shadow  z="1" ></paper-shadow>
+                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
+                </div>
+                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label" fit>En Vivo</div>
+                    <paper-shadow  z="1" ></paper-shadow>
+                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
+                </div>
+                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label" fit>Certificate</div>
+                    <paper-shadow  z="1" ></paper-shadow>
+                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
+                </div>
+                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label" fit>Blog</div>
+                    <paper-shadow  z="1" ></paper-shadow>
+                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
+                </div>
+                <div  class="card"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
+                    <div class="label" fit>Start-Tools</div>
+                    <paper-shadow  z="1" ></paper-shadow>
+                    <paper-ripple class="recenteringTouch" fit></paper-ripple>
+                </div>
+            </section>
+        </div>
+
     </template>
 </polymer-element>
 

@@ -117,3 +117,12 @@ polyfill-next-selector { content: ':host .indent'; }
 ::content > .indent {
     margin-left: 60px;
 }
+
+@media only screen  and (max-width: 374px){
+    :host{
+        height: 64px;
+    }
+    .toolbar-tools {
+        height: 64px;
+    }   
+}
