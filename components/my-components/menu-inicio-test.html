@@ -2,6 +2,7 @@
 <link rel="import" href="../paper-ripple/paper-ripple.html">
 <link rel="import" href="../paper-shadow/paper-shadow.html">
 <link rel="import" href="../paper-shadow/paper-shadow.css">
+<link rel="stylesheet" href="../../fonts/fonts.css" type="text/css" charset="utf-8" />
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script>
 
@@ -49,6 +50,7 @@
                 background-position: center;
                 background-color: #FFFCCC;
             }
+
             /* background label cards */
             .lblacerca{ background-color: #b967c7; }
             .lblenvivo{ background-color:  #ff6f42; }
@@ -57,12 +59,13 @@
             .lblstart{ background-color: #fbbf2c; }
             .lblredes{ background-color: #f5bd19; }
             .lblcalendar{ background-color: #1ce8b5; }
-            
+            .welcome{ font-family: 'robotoregular'; }
             .cat-name{
                 height: 45px;
                 padding: 0px 16px;
                 font-size: 1em;
                 color: #FFF;
+                font-family: 'robotoregular';
                 margin-top: 221px;
             }
             @media only screen and (min-width: 1245px){
@@ -184,12 +187,16 @@
                     margin-top: 130px;
                     height: 20px;
                 }
+                p.tag{
+                    font-size: 0.8em;
+                    display: inline;
+                }
             }
 
         </style>
 
         <div class="dashboard">
-            <h1 class="media-query">BIENVENIDO</h1>
+            <h1 class="welcome">BIENVENIDO</h1>
             <section style="float:left; margin-right:4px;" class="eliminar">
                 <div id="banner" class="card" onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
                     <div class="label" fit>Banner</div>
@@ -199,39 +206,39 @@
             </section>
             <section>
                 <div  class="card redes"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label cat-name lblredes" fit>Redes</div>
+                    <div class="label cat-name lblredes" fit><p class="tag">Redes</p></div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
                 <br class="eliminar" />
                 <div  class="card calendar"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label cat-name lblcalendar" fit>Calendario</div>
+                    <div class="label cat-name lblcalendar" fit><p class="tag">Calendario</p></div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
                 <br class="eliminar" />
                 <div  class="card acerca"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label cat-name lblacerca" fit>Acerca</div>
+                    <div class="label cat-name lblacerca" fit><p class="tag">Acerca</p></div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
                 <div  class="card envivo"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label cat-name lblenvivo" fit>En Vivo</div>
+                    <div class="label cat-name lblenvivo" fit><p class="tag">En Vivo</p></div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
                 <div  class="card certifica"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label cat-name lblcertifica" fit>Certificate</div>
+                    <div class="label cat-name lblcertifica" fit><p class="tag">Certificate</p></div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
                 <div  class="card blog"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label cat-name lblblog" fit>Blog</div>
+                    <div class="label cat-name lblblog" fit><p class="tag">Blog</p></div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
                 <div  class="card starttool"  onmouseover="$(this).children('paper-shadow').attr('z', '3');"  onmouseout="$(this).children('paper-shadow').attr('z', '1');">
-                    <div class="label cat-name lblstart" fit>Start-Tools</div>
+                    <div class="label cat-name lblstart" fit><p class="tag">Start-Tools</p></div>
                     <paper-shadow  z="1" ></paper-shadow>
                     <paper-ripple class="recenteringTouch" fit></paper-ripple>
                 </div>
